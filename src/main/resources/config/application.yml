@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+# Application logging
+logging:
+  level:
+    root: WARN
+    org.springframework: INFO
+    uk.co.mulecode: INFO
+
+spring:
+  application:
+    name: querydsl-jpa-sample
+
+  datasource:
+    url: jdbc:h2:mem:querydslSampleDb
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    database: H2
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+      dialect: org.hibernate.dialect.H2Dialect
