@@ -34,9 +34,10 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.springframework.boot:spring-boot-starter-web")
 
+    annotationProcessor("org.springframework.boot:spring-boot-starter-data-jpa")
     annotationProcessor("com.querydsl:querydsl-apt:4.2.1:jpa")
-    implementation("com.querydsl:querydsl-core:4.2.1")
-    implementation("com.querydsl:querydsl-jpa:4.2.1")
+    compileOnly("com.querydsl:querydsl-core:4.2.1")
+    compileOnly("com.querydsl:querydsl-jpa:4.2.1")
 
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("com.h2database:h2:1.4.197")
